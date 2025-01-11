@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import pickle
-import xgboost as xgb
+import xgboost as model
 import pandas as pd
 # from typing import Final 
 # from telegram import Bot, Update
@@ -38,7 +38,7 @@ for i in range(len(samples)):
     ans.append(samples.iloc[i].tolist())
 
 
-with open("xgb.pkl","rb") as file:
+with open("model.pkl","rb") as file:
     model=pickle.load(file)
 @app.route('/predict', methods=['GET','POST'])
 def calculate():
