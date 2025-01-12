@@ -5,6 +5,9 @@ from pymongo import MongoClient
 from datetime import datetime
 import time
 
+# #configuration
+# st.config.set_option('server.port', 8505)
+
 # Load the machine learning model
 rfc = joblib.load('best_model.joblib')
 
@@ -26,16 +29,25 @@ categories = [
 # Streamlit App Title
 st.title("Machine Predictive Maintenance")
 
+#Js for redirection
+def redirect_button(url):
+    st.markdown(f"""
+                <script>
+                    window.location.href="{url}"
+                </script>
+                """, unsafe_allow_html=True)
+
 # Add buttons for navigation
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button('View Details'):
-        st.write("Here you can display the details of your model or any additional info.")
+    # if st.button('View Details'):
+        #redirect_button('http://localhost:3000/dashboard')
+        st.write("[View details](http://localhost:3000/reports)")
         
 with col2:
-    if st.button('Home'):
-        st.write("This will redirect to the home page or main menu.")
+    #if st.button('Home'):
+        st.write("[Home](http://localhost:3000/dashboard)")
 
 # Collect user input for type
 selected_type = st.selectbox('Select a Type', ['Low', 'Medium', 'High'])
