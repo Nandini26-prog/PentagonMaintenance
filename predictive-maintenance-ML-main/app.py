@@ -79,7 +79,12 @@ if st.button('Start Monitoring'):
             st.write(f"**Air Temperature [K]:** {air_temperature}, **Process Temperature [K]:** {process_temperature}")
             st.write(f"**Rotational Speed [rpm]:** {rotational_speed}, **Torque [Nm]:** {torque}")
             st.write(f"**Tool Wear [min]:** {tool_wear}")
-            st.markdown(f"#### Prediction: **{predicted_type}**")
+            
+            # Display the failure status with emojis
+            if predicted_type == 'No Failure':
+                st.markdown(f"#### **Status:** 🟢 **No Failure**")
+            else:
+                st.markdown(f"#### **Status:** 🔴 **{predicted_type} Detected!**")
 
             # If failure is detected, display an alert and detailed analysis
             if predicted_type != 'No Failure':
