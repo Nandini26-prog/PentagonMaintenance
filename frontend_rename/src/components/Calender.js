@@ -3,16 +3,12 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import axios from "axios";
-import './Navbar.css';
 
-
+//Calendar display
 const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
 const month = 2; // April (months are 0-indexed)
 const year = 2024;
 const days = Array.from({ length: daysInMonth(year, month + 1) }, (_, i) => i + 1);
-
-
-
 
 const Calender = () => {
   const navigate = useNavigate();
@@ -85,8 +81,8 @@ const Calender = () => {
           }}
         >
           <Link to={`/`}>
-          <span style={{ color: '#f8f5f5' }}>Machine</span>
-          <span style={{ color: 'orange' }}>Buddy</span>
+            <span style={{ color: '#f8f5f5' }}>Machine</span>
+            <span style={{ color: 'orange' }}>Buddy</span>
           </Link>
         </div>
 

@@ -15,12 +15,14 @@ const Reports = () => {
   };
   const type = localStorage.getItem("type")
   return (
-    <div>
+    <div style={{position: 'absolute'}}>
+      <div>
       <nav
         style={{
           width: '100%',
-          margin: 'auto',
+          margin: '0px',
           paddingTop: '20px',
+          position:'fixed',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -51,7 +53,7 @@ const Reports = () => {
         >
           <li style={{ margin: '15px', position: 'relative' }}>
             <Link
-              to={`/`}
+              to={`/dashboard`}
               style={{
                 textDecoration: 'none',
                 padding: '0.3rem 1.3rem',
@@ -116,7 +118,6 @@ const Reports = () => {
                     display: 'block',
                     width: '0%',
                     height: '4px',
-                    position: 'absolute',
                     bottom: '-2px',
                     left: '0',
                     backgroundColor: '#1565C0',
@@ -160,35 +161,31 @@ const Reports = () => {
           </li>
         </ul>
       </nav>
-
-
-      <div className="flex justify-center items-center" style={{margin:'50px', marginBottom: '30px'}}>
-        <div className=''>
-          <div className='text-2xl font-bold text-center'>Parameter vs. Fault Severity</div>
-
-          <img src={img2} alt="heatmap" height="500" width="500" />
-        </div>
       </div>
-      <div className="flex justify-center items-center" style={{margin:'50px', marginBottom: '30px'}}>
-        <div className='mt-8'>
-          <div className='text-2xl font-bold text-center mt-4'>Threshold Exceedance Visualization:</div>
-          <div><br></br></div>
-          <img src={img3} alt="avp" height="500" width="550" />
-        </div>
-      </div>
-      <div className="flex justify-center items-center" style={{margin:'50px', marginBottom: '30px'}}>
-        <div className='mt-6'>
+
+      <div className="flex justify-center items-center" style={{ margin: '50px', marginBottom: '30px', paddingTop:'70px' }}>
+        <div className='mt-6' >
           <div className='text-2xl font-bold text-center'>Heat Map for Component-Wise Fault Severity</div>
           <div><br></br></div>
-          <img src={heatmap} alt="heatmap" height="500" width="500" />
+          <img src={heatmap} alt="heatmap" height="800" width="800" />
         </div>
-      </div>
-      <div className="flex justify-center items-center" style={{margin:'50px', marginBottom: '30px'}}>
-
         <div>
           <div className='text-2xl font-bold text-center'>Heat Correlation Visualization</div>
           <div><br></br></div>
-          <img src={img1} alt="avp" height="550" width="550" />
+          <img src={img1} alt="avp" height="750" width="700" />
+        </div>
+      </div>
+      <div className="flex justify-center items-center" style={{ margin: '50px', marginBottom: '30px' }}>
+        <h1 className='text-2xl font-bold text-center'>Parameter vs. Fault Severity</h1>
+        <div className='mt-8'>
+          <img src={img2} alt="heatmap" height="1000" width="1000" />
+        </div>
+      </div>
+      <div className="flex justify-center items-center" style={{ margin: '50px', marginBottom: '30px' }}>
+        <div className='text-2xl font-bold text-center mt-4'>Threshold Exceedance Visualization:</div>
+        <div className='mt-8'>
+          <div><br></br></div>
+          <img src={img3} alt="avp" height="1000" width="1000" />
         </div>
       </div>
     </div>

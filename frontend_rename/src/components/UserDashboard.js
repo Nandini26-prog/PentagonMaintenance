@@ -4,7 +4,6 @@ import namaste from './namaste.png'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import ForcastChart from './ForcastChart.js';
 
 const UserDashboard = () => {
   const [selectedOption, setSelectedOption] = useState('Select a Machine');
