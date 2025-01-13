@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>AI Kavach: Predictive Maintenance for Industrial Equipment using Machine Learning</h1>
+<h1> Predictive Maintenance for Industrial Equipment</h1>
 
 <h2>Project Overview</h2>
 <p>AI Kavach is a predictive maintenance solution developed for industrial equipment utilizing machine learning techniques. The project aims to predict equipment failures and maintenance needs in advance, enabling proactive maintenance scheduling and minimizing downtime. This project was developed as part of the IEEE CS SPIT AERAVAT 1.0 AI Hackathon, where it won 1st prize in the machine learning domain.</p>
