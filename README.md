@@ -73,13 +73,7 @@
 
 <hr>
 
-<p><strong>Contributors:</strong></p>
-<ul>
-    <li>Aditya Potdar</li>
-    <li>Pushkar Waykole</li>
-    <li>Harshit Singh</li>
-    <li>Sarvagya Singh</li>
-</ul>
+
 
 <p><em>Note:</em> Please find the detailed code, documentation, and results in the repository. Contributions and feedback are welcomed.</p>
 
